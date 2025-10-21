@@ -1,8 +1,7 @@
 node {
     stage('Preparation') {
         catchError(buildResult: 'SUCCESS') {
-            sh 'docker stop to-dolist-app'
-            sh 'docker rm to-dolist-app'
+            sh 'docker rm -f todo-app || true'
         }
     }
     stage('Build') {
