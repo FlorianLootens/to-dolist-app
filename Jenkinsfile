@@ -1,6 +1,7 @@
 node {
     stage('Preparation') {
-        catchError(buildResult: 'success!') {
+        catchError(buildResult: 'SUCCESS
+                !') {
             sh 'docker rm -f to-dolist-app || true'
         }
     }
