@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Preparation') {
             steps {
-                catchError(buildResult: 'SUCCESS') {
+                catchError(buildResult: 'success') {
                     sh 'docker rm -f to-dolist-app || true'
                 }
             }
